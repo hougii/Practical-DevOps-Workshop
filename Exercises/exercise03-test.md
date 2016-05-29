@@ -36,7 +36,9 @@
    * `Install-Package Microsoft.Owin.Host.SystemWeb -Project Books.Test`
    * `Install-Package Microsoft.AspNet.WebApi.OwinSelfHost -Project Books.Test`
 
-1. **Commit** your code to your local Git Repository.
+1. **Commit** your code to your local Git Repository 
+
+> Note commiting code to your local repo, means it's only available on your machine)
 
 ## Add and Run Tests
 
@@ -121,9 +123,7 @@
 
 ## Update and Run Web Test against Azure
 
-1. Open the web test created in [exercise 2](exercise02-build-version-deploy.md).
-
-1. Change web server to deployment in the cloud.<br/>
+1. Change web server to deployment in the cloud. <br/>Since you have not deployed to code yet, use the http://lx-practicaldevops.azurewebsites.net/api/books as the url. We have an instance already running in the cloud for you<br/>
    ![Change web server URL](img/change-to-cloud-server.png)
    
 1. Run web test to see if it succeeds for deployed version.
@@ -141,13 +141,15 @@
 
 1. Select the following test settings (select default values for settings not mentioned here):
    * Select *On-premise Load Test* (we will move to the cloud later)
-   * 100 test iterations
-   * 5 seconds sampling rate
-   * Constant load of 10 users
-   * Add the `GetBooksTest` to the load test
+   * 100 test iterations (run settings)
+   * 5 seconds sampling rate (run settings)
+   * Constant load of 10 users (load pattern)
+   * Add the `GetBooksTest` to the load test (test mix)
 
 1. **Discussion points:**
    * Describe other capabilities of Visual Studio load testing
+
+1. Rename your load test from `LoadTest1` to lx-yourname/team name
 
 1. Run load test.<br/>
    ![Run load test](img/run-load-test.png)
@@ -157,7 +159,9 @@
 
 1. **Commit** your code to your local Git Repository.
 
-1. **Push** your code to VSTS.
+1. **Push** your code to VSTS (this means the code will be available on the server available to be synched by other team members. You can see the code is know on your server by browsing source code on your team project `code` Hub)
+
+> Notice the difference between commit and push. While commit only commits the changes to your local repository, pushes moves the changes to the VSTS repository.
 
 ## Further Ideas
 

@@ -4,16 +4,17 @@
 
 This repository and its content has been created for the training "Practical DevOps". Its content is described below. The trainings take place all over Western Europe in spring 2016. Note that the content of the repository will not be kept up to date after all the trainings took place.
 
+## Source
+
+These slides and exercises are based on the original course available at [github.com/rstropek/PracticalDevOpsTraining](github.com/rstropek/PracticalDevOpsTraining) and on a derived course [made by Martin Hinshelwood](https://github.com/nkdAgility/Practical-DevOps-Workshop)
+
+The content has been adapted to better suite the workshop audience at Lisbon. The agenda has changes, and so do the exercises.
 
 ## Slides and Exercises
 
-**Note that you can view the slides online at [http://nkdagility.net/practical-devops-slides](http://nkdagility.net/practical-devops-slides)[[SlidesPDF](http://nkdagility.net/practical-devops-pdf)]**.
+**The slides are available as parte of this repo [slides PDF](LX Practical-DevOps-slides)**.
 
 **You find the exercises of the training in the [Exercises](Exercises) folder.**
-
-The training outline is available in [Excel](DevOpsPartnerTrainingOutline.xlsx) and [PDF](DevOpsPartnerTrainingOutline.pdf).
-
-Slides and exercises are currently still work in progress.
 
 **You will be asked to access your Team Project in: [https://practicaldevops.visualstudio.com](https://practicaldevops.visualstudio.com)**
 

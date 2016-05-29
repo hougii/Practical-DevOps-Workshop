@@ -8,21 +8,39 @@
 3. Understand the importance of NuGet (will become even more important with .NET Core)
 4. Learn very basics about ASP.NET Web API development (this will not be a deep dive as we focus on DevOps, not just Dev) 
 
+## Before you begin (optional)
+
+Everytime you are referred to copy exercises the [assets](Assets) folder you can do it directly from GitHub repository
+or you can clone it your local machine.
+
+If you wish to clone the repository, open a command line at a folder of your choice and issue the command
+
+`git clone https://github.com/tspascoal/Practical-DevOps-Workshop.git`
+
+![Clone the course repository](img/git-clone-repository.png)
 
 ## Creating Project in Visual Studio
 
 1. Start Visual Studio
 
+1. Open your team project in a web browser [https://practicaldevops.visualstudio.com/](https://practicaldevops.visualstudio.com/), select your team project and select the `Work` hub<br/>
+
+1. Enter a backlog item/User Story with the title `Create an ASP.NET API application to list books` (click Add or just press enter)<br/>
+![Clone the course repository](img/vsts-create-work-item.png)
+
+1. Double click on the created work item and take not of the number, you are going to need it later. If you want you may take some time to familiarize yourself with the work item form and enter some extra data (like assign the work item to one of the team members, a description,etc)<br/>
+![work item number](img/vsts-work-item-number.png)
+
 1. Connect to http://practicaldevops.visualstudio.com in Team Explorer and select the Team Project of the name [location]-team-[yourTeamName].<br/>![Connect to VSTS](img/practicaldevops-connect-vsts.png)
 
-1. Clone the repository to your local disk<br />![Clone the Repository](img/practicaldevops-clone-repository.png)
+1. Clone the repository to your local disk<br />![Clone VSTS Repository](img/practicaldevops-clone-repository.png)
 
 1. Create a new web project. **Disable** Application Insights for now. We will add Application Insights later. <br/>![New Web Project in VS](img/practicaldevops-create-empty-web-project.png)
 
 1. Use the **ASP.NET 4.5.2 "Empty" Template**:<br/>
    ![New Web Project in VS](img/visual-studio-new-web-project-02.png)
 
-1. Switch to latest version of .NET:<br/>
+1. Switch to latest version of .NET: (right click on Books project node and click on properties)<br/>
    ![Switch to latest .NET](img/switch-to-dotnet-4_6.png)
 
 1. **Discussion points:**
@@ -30,7 +48,8 @@
    * Motivation of Microsoft to not just continue the way of the past with .NET (importance of cross-platform, modern architecture, open-source, etc.)
    * Describe that we now focus on the production version of .NET (4.6), ASP.NET Core Preview follows later.
    
-1. Install necessary NuGet packages by running the following commands in Visual Studio's *Package Manager Console* (you can use *Manage NuGet Packages for Solution* instead if you prefer GUI over PowerShell):
+1. Install necessary NuGet packages by running the following commands in Visual Studio's *Package Manager Console* (Package Manager Console is available in the menu `Tools-> NuGet Package Manager`
+ or you can use *Manage NuGet Packages for Solution* instead if you prefer GUI over PowerShell):
    * `Install-Package Microsoft.AspNet.WebApi.Owin`
    * `Install-Package Microsoft.Owin.Host.SystemWeb`
    * `Install-Package Microsoft.Owin.Cors`
@@ -72,7 +91,9 @@
    * `System.ComponentModel.Composition.Registration`
    * `System.Reflection.Context`
 
-1. Copy `.cs` files from [Excercise-1-Service-Implementation](Assets/Exercise-1-Service-Implementation) into your project. Note that you can overwrite `Startup.cs`.
+1. Copy `.cs` files from [Exercise-1-Service-Implementation](Assets/Exercise-1-Service-Implementation) into your project. Note that you can overwrite `Startup.cs`.
+
+1. After copying the files (including the folders Controllers, Model and Services) include all those files in the Books project (use add or enable `Show all Files` and use `Include in Project`)
 
 1. **Discussion points:**
    * Code walkthrough (depth depends on existing knowledge and interests of the audience)
@@ -102,7 +123,11 @@
 
 1. Refresh the URL mentioned above multiple times. Note how random books with random names are generated.
 
-1. Push the new web project to your Git repository in TFVC<br />
+1. (see next step) on the commit screen, press + on the `related work items` and enter the work item number in the text box<br/> 
+![add work item](img/vsts-commit-add-workitem.png)
+Alternatively you can enter "#work item number - Description of the commit" (eg: #323 This is the first version of the book API). VSTS will pick that after the # you have a work item number and associate it to the commit
+
+1. Push the new web project to your Git repository in Team Explorer `Changes` hub<br />
    ![Add References](img/practicaldevops-commit-and-push-web-project.png)
 
 1. **Discussion points:**
